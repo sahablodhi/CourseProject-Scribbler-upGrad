@@ -1,0 +1,139 @@
+.postslist {
+  background-color: #ffeedd;
+  background-image: none;
+}
+
+.posts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box {
+  width: 40vw;
+  margin: 20px;
+  background-color: #ddd;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  color: 333;
+  box-shadow: 5px 5px 20px gray;
+}
+
+.box:hover {
+  box-shadow: 10px 10px 20px gray;
+}
+
+.username {
+  height: 95%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #666;
+}
+
+.post-content {
+  padding: 10px;
+}
+
+.post-header {
+  /* display: flex; */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.post-header p {
+  color: #888;
+  font-weight: bold;
+  padding: 5px 0;
+  font-size: large;
+}
+
+.post-desc {
+  height: 55px;
+  overflow: hidden;
+  padding-top: 1px;
+}
+
+.ellipsis {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+i {
+  color: #666;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.modal-container {
+  background-color: #fefefe;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  line-height: 1.5;
+  max-width: 350px;
+}
+
+#modal-btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+#modal-btn button:first-child {
+  background-color: #40e355;
+  color: white;
+  border: none;
+  width: 60px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+#modal-btn button:last-child {
+  background-color: red;
+  color: white;
+  border: none;
+  width: 60px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.fa-trash {
+  float: right;
+}
+
+.heading {
+  align-self: left;
+  font-family: "Poppins", sans-serif;
+}
+
+.fa-ellipsis-h {
+  cursor: pointer;
+}

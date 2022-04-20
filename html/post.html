@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--TODO: Include Font Awesome files here -->
+  <script src="https://kit.fontawesome.com/af7a46e1ed.js" crossorigin="anonymous"></script>
+  <title>Scribbler | Post</title>
+
+  <!-- TODO: IncludeGoogle Fonts files here-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montez&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet" />
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <!--TODO: Include Include css files here-->
+  <link rel="stylesheet" href="../styles/index.css" />
+  <link rel="stylesheet" href="../styles/common.css" />
+  <link rel="stylesheet" href="../styles/post.css" />
+
+  <!-- TODO: IncludeBootstrap files here-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body class="posts">
+  <!-- code for header  -->
+  <div class="header">
+    <div class="title-container">
+      <p class="title">ScriBBler</p>
+      <p class="sub-title">Explore, Imagine, Create</p>
+    </div>
+    <div class="login-buttons-container">
+      <button onclick="showSignUpModal()" class="blue-button" type="button">
+        Sign Up
+      </button>
+      <button onclick="showSignInModal()" class="blue-button" type="button">
+        Sign In
+      </button>
+    </div>
+  </div>
+  <!-- Insert code for Sign In modal here -->
+  <div class="modal" id="signin-modal">
+    <div class="modal-content">
+      <div class="modal-head">
+        <span>
+          <i onclick="hideSignInModal()" class="fa fa-times" aria-hidden="true"></i>
+          <h2 class="modal-title">Welcome Back!</h2>
+        </span>
+      </div>
+      <hr />
+      <form>
+        <label for="username" class="label-text">Username</label>
+        <input type="text" id="username" placeholder="Enter your username" required />
+        <label for="password" class="label-text">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+        <button type="submit" onclick="signin(username, password)" class="signin-btn">
+          Sign In
+        </button>
+      </form>
+      <div class="container">
+        <p class="bottom-banner">
+          Not a member?<span onclick="hideSignInModal();showSignUpModal()" class="signup">Sign Up</span>
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- Insert code for Sign Up modal here -->
+  <div>
+    <div class="modal" id="signup-modal">
+      <div class="modal-content">
+        <div class="modal-head">
+          <span>
+            <i onclick="hideSignUpModal()" class="fa fa-times" aria-hidden="true"></i>
+            <h2 class="modal-title">Get Started</h2>
+          </span>
+        </div>
+        <hr />
+        <form>
+          <label for="fullname" class="label-text">Name</label>
+          <input type="text" id="fullname" placeholder="Enter your name" required />
+          <label for="username" class="label-text">Username</label>
+          <input type="text" id="username" placeholder="Enter your username" required />
+          <label for="password" class="label-text">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+          <label for="confirmpassword" class="label-text">Confirm Password</label>
+          <input type="password" id="confirm_password" placeholder="Re-enter your password" required />
+          <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)" class="signin-btn">
+            Sign Up
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- main section for displaying post title, user name and post -->
+  <main>
+    <input type="text" id="title" name="title" readonly></input>
+    <div class="header">
+      <p class="name" id="name2"></p>
+      <button id="edit" onclick="edit()">Edit&nbsp;<i class="fas fa-edit"></i></button>
+      <button id="save" onclick="save()" style="display: none;">Save&nbsp;<i class="fas fa-save"></i></button>
+    </div>
+    <div class="post">
+      <div id="postContent"></div>
+    </div>
+    <div class="like">
+      <button onclick="like()"><i class="fas fa-thumbs-up"></i>&nbsp;Like</button>
+      <p>Be the first one to like this!</p>
+    </div>
+    <div class="comment">
+      <textarea name="comment" id="comment" cols="80" rows="5" placeholder="Leave a comment..."></textarea>
+      <button onclick="postComment()">Comment</button>
+    </div>
+
+    <!-- Comments area -->
+    <div class="comment-area">
+      <h3>All Comments</h3>
+
+      <div id="all-comments"></div>
+    </div>
+  </main>
+  <script src="../scripts/common.js"></script>
+  <!-- Place all Javascript for rest of the elements in this file -->
+  <script src="../scripts/index.js"></script>
+
+  <script src="../scripts/post.js"></script>
+</body>
+
+</html>

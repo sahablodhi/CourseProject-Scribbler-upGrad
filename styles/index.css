@@ -1,0 +1,76 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 !important;
+  background-size: 100% cover !important;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+}
+
+#main-container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.yellow-button {
+  background-color: rgba(238, 227, 71, 0.925);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 10px;
+  padding-left: 10px;
+  color: black;
+  font-family: "Ubuntu Condensed";
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.postButtons {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+  margin-top: 10px;
+  background-color: rgb(245, 243, 243);
+  border: none;
+  text-indent: 5px;
+}
+
+.create-btn {
+  margin-top: 10px;
+  background-color: green;
+  font-size: 14px;
+  width: 100px;
+  color: white;
+  padding: 10px;
+  align-self: center;
+  font-family: Abel;
+}
+
+.post-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: auto;
+}
+
+.fa-times {
+  float: right;
+}
