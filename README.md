@@ -1,2 +1,2 @@
 # CourseProject-Scribbler-upGrad
-+Project is related to course curriculum.
+- Project is related to course curriculum.
